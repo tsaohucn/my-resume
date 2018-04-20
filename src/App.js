@@ -2,9 +2,14 @@ import React, { Component } from 'react'
 import { SocialIcon } from 'react-social-icons'
 import { Timeline, TimelineEvent } from 'react-event-timeline'
 import Modal from 'react-modal'
+import Iframe from 'react-iframe'
+
 import avator from './avator.jpg'
 import introduce from './introduce.json'
 import job from './job.json'
+import Test from './test'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
 
 Modal.setAppElement('#root')
 
@@ -68,7 +73,7 @@ class App extends Component {
             iconStyle={{fontSize: 9,fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#808080"          
-            buttons={<button type="button" onClick={this.showJobOneDetail}>詳細內容</button>}
+            buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
           >
             {job.seven}
           </TimelineEvent>
@@ -151,21 +156,25 @@ class App extends Component {
             iconStyle={{fontSize: 9,fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#ffa500"
-            buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
+            buttons={<button type="button" onClick={this.showJobOneDetail}>詳細內容</button>}
           >
             {job.one}
           </TimelineEvent>
         </Timeline>
-
         <Modal
           isOpen={this.state.jobOneDetail}
-          //onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeJobOneDetail}
           style={styles.jobOneDetail}
-          contentLabel="Example Modal"
+          //contentLabel="Example Modal"
         >
-          <h2>JobOneDetail</h2>
-          <p>12345</p>
+          <Iframe 
+            width="1280" 
+            height="720" 
+            url="https://www.youtube.com/embed/eDzyv6XVSgY" 
+            display="initial"
+            position="relative"
+            //allow="autoplay; encrypted-media"
+          />
         </Modal>
       </div>
     )
@@ -226,7 +235,6 @@ const styles = {
       left                  : '50%',
       right                 : 'auto',
       bottom                : 'auto',
-      marginRight           : '-50%',
       transform             : 'translate(-50%, -50%)'
     }
   }
