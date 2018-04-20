@@ -4,6 +4,7 @@ import { Timeline, TimelineEvent } from 'react-event-timeline'
 import Modal from 'react-modal'
 import avator from './avator.jpg'
 import introduce from './introduce.json'
+import job from './job.json'
 
 Modal.setAppElement('#root')
 
@@ -58,20 +59,101 @@ class App extends Component {
         </div>
         <Timeline style={styles.timeLine}>
           <TimelineEvent 
-            title="Reacr Native Senior Engineer"
-            createdAt="2016-09-12 10:06 PM"
-            icon={<i className="material-icons md-18"></i>}
+            icon={'澳勝'}
+            createdAt="2013"
+            title="React Native Senior Engineer"
+            subtitle="React Native"
+            titleStyle={{fontWeight: "bold"}}
+            subtitleStyle={{color: "green"}}            
+            iconStyle={{fontSize: 9,fontWeight: 'bold'}}
+            bubbleStyle={{backgroundColor: "#ffffff"}}
+            iconColor="#808080"          
             buttons={<button type="button" onClick={this.showJobOneDetail}>詳細內容</button>}
           >
-            工作內容
+            {job.seven}
           </TimelineEvent>
           <TimelineEvent
-            title="You sent an email to John Doe"
-            createdAt="2016-09-11 09:06 AM"
-            icon={<i className="material-icons md-18"></i>}
+            icon={'凱明'}
+            createdAt="2013"
+            title="React Native Junior Engineer"
+            subtitle="React Native"
+            titleStyle={{fontWeight: "bold"}}
+            subtitleStyle={{color: "green"}}            
+            iconStyle={{fontSize: 9,fontWeight: 'bold'}}
+            bubbleStyle={{backgroundColor: "#ffffff"}}
+            iconColor="#228b22"
             buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
           >
-            工作內容
+            {job.six}
+          </TimelineEvent>
+          <TimelineEvent
+            icon={'ITRI'}
+            createdAt="2016"
+            title="DevOps Engineer"
+            subtitle="Docker Ansible"
+            titleStyle={{fontWeight: "bold"}}
+            subtitleStyle={{color: "green"}}            
+            iconStyle={{fontSize: 9,fontWeight: 'bold'}}
+            bubbleStyle={{backgroundColor: "#ffffff"}}
+            iconColor="#03a9f4"
+          >
+            {job.five}
+          </TimelineEvent>
+          <TimelineEvent
+            icon={'ITRI'}
+            createdAt="2015"
+            title="Backend Engineer"
+            subtitle="Ruby on Rails"
+            titleStyle={{fontWeight: "bold"}}
+            subtitleStyle={{color: "green"}}            
+            iconStyle={{fontSize: 9,fontWeight: 'bold'}}
+            bubbleStyle={{backgroundColor: "#ffffff"}}
+            iconColor="#03a9f4"
+            buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
+          >
+            {job.four}
+          </TimelineEvent>
+          <TimelineEvent
+            icon={'ITRI'}
+            createdAt="2014"
+            title="Data Science Engineer"
+            subtitle="Java Python Ruby"
+            titleStyle={{fontWeight: "bold"}}
+            subtitleStyle={{color: "green"}}            
+            iconStyle={{fontSize: 9,fontWeight: 'bold'}}
+            bubbleStyle={{backgroundColor: "#ffffff"}}
+            iconColor="#03a9f4"
+            buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
+          >
+            {job.three}
+          </TimelineEvent>
+          <TimelineEvent
+            icon={'ITRI'}
+            createdAt="2013"
+            title="Unity Junior Developer"
+            subtitle="JavaScript Unity3D"
+            titleStyle={{fontWeight: "bold"}}
+            subtitleStyle={{color: "green"}}            
+            iconStyle={{fontSize: 9,fontWeight: 'bold'}}
+            bubbleStyle={{backgroundColor: "#ffffff"}}
+            iconColor="#03a9f4"
+            buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
+          >
+            {job.two}
+          </TimelineEvent>
+          <TimelineEvent
+            icon={'NCTU'}
+            createdAt="2010"
+            title="Rocket Researcher"
+            subtitle="C"
+            titleStyle={{fontWeight: "bold"}}
+            subtitleStyle={{color: "green"}}
+            iconStyle={{fontSize: 9,fontWeight: 'bold'}}
+            bubbleStyle={{backgroundColor: "#ffffff"}}
+            iconColor="#ffa500"
+            buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
+          >
+            {job.one}
           </TimelineEvent>
         </Timeline>
 
@@ -131,7 +213,7 @@ const styles = {
     alignItems: 'center'
   },
   introduce: {
-    //padding: 50
+    padding: 10
   },
   timeLine: {
     //backgroundColor: 'red',
@@ -139,6 +221,13 @@ const styles = {
     marginTop: 20
   },
   jobOneDetail: {
-
+    content : {
+      top                   : '50%',
+      left                  : '50%',
+      right                 : 'auto',
+      bottom                : 'auto',
+      marginRight           : '-50%',
+      transform             : 'translate(-50%, -50%)'
+    }
   }
 }
