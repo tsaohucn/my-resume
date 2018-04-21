@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import { SocialIcon } from 'react-social-icons'
 import { Timeline, TimelineEvent } from 'react-event-timeline'
 import Modal from 'react-modal'
@@ -159,9 +158,6 @@ export default class App extends Component {
             {job.one}
           </TimelineEvent>
         </Timeline>
-        <Link to={"/test/2e2e"}>
-          GoToTestPage
-        </Link>
         <Modal
           isOpen={this.state.jobOneDetail}
           onRequestClose={this.closeJobOneDetail}
