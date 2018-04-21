@@ -58,6 +58,7 @@ export default class App extends Component {
           <SocialIcon style={styles.SocialIcon} url="https://www.youtube.com/c/Tsaohucn" />
           <SocialIcon style={styles.SocialIcon} url="https://stackoverflow.com/users/5078051/tsao" />
           <SocialIcon style={styles.SocialIcon} url="https://www.kaggle.com/tsaohucn" />
+          <SocialIcon style={styles.SocialIcon} url="https://www.linkedin.com/in/hsiu-chuan-tsao-623598a6/" />
         </div>
         <Timeline style={styles.timeLine}>
           <TimelineEvent 
@@ -67,7 +68,7 @@ export default class App extends Component {
             subtitle="React Native"
             titleStyle={{fontWeight: "bold"}}
             subtitleStyle={{color: "green"}}            
-            iconStyle={{fontSize: 9,fontWeight: 'bold'}}
+            iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#808080"          
             buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
@@ -81,7 +82,7 @@ export default class App extends Component {
             subtitle="React Native"
             titleStyle={{fontWeight: "bold"}}
             subtitleStyle={{color: "green"}}            
-            iconStyle={{fontSize: 9,fontWeight: 'bold'}}
+            iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#228b22"
             buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
@@ -95,7 +96,7 @@ export default class App extends Component {
             subtitle="Docker Ansible"
             titleStyle={{fontWeight: "bold"}}
             subtitleStyle={{color: "green"}}            
-            iconStyle={{fontSize: 9,fontWeight: 'bold'}}
+            iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#03a9f4"
           >
@@ -108,7 +109,7 @@ export default class App extends Component {
             subtitle="Ruby on Rails"
             titleStyle={{fontWeight: "bold"}}
             subtitleStyle={{color: "green"}}            
-            iconStyle={{fontSize: 9,fontWeight: 'bold'}}
+            iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#03a9f4"
             buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
@@ -122,7 +123,7 @@ export default class App extends Component {
             subtitle="Java Python Ruby"
             titleStyle={{fontWeight: "bold"}}
             subtitleStyle={{color: "green"}}            
-            iconStyle={{fontSize: 9,fontWeight: 'bold'}}
+            iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#03a9f4"
             buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
@@ -136,7 +137,7 @@ export default class App extends Component {
             subtitle="JavaScript Unity3D"
             titleStyle={{fontWeight: "bold"}}
             subtitleStyle={{color: "green"}}            
-            iconStyle={{fontSize: 9,fontWeight: 'bold'}}
+            iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#03a9f4"
             buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
@@ -150,7 +151,7 @@ export default class App extends Component {
             subtitle="C"
             titleStyle={{fontWeight: "bold"}}
             subtitleStyle={{color: "green"}}
-            iconStyle={{fontSize: 9,fontWeight: 'bold'}}
+            iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#ffa500"
             buttons={<button type="button" onClick={this.showJobOneDetail}>詳細內容</button>}
@@ -190,11 +191,14 @@ const styles = {
     display: 'flex'
   },
   socialBar: {
-    paddingTop: 40,
+    //paddingTop: 40,
     //backgroundColor: 'yellow',
+    justifyContent: 'center',
+    paddingBottom: 20
   },
   SocialIcon: {
-    marginRight: 10
+    marginRight: 10,
+    marginTop: 20
   },
   avatorDiv: {
     display: 'flex',
@@ -222,7 +226,7 @@ const styles = {
   timeLine: {
     //backgroundColor: 'red',
     margin: 0,
-    marginTop: 20
+    //marginTop: 20
   },
   jobOneDetail: {
     content : {
