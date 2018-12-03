@@ -6,7 +6,6 @@ import MenuItem from 'material-ui/MenuItem'
 import AppBar from 'material-ui/AppBar'
 
 import Profile from './Profile'
-import Test from './Test'
 
 export default class App extends Component {
 
@@ -18,7 +17,6 @@ export default class App extends Component {
             <Navigator/>
           	<Switch>
     	        <Route exact path="/" component={Profile}/>
-    	        <Route path="/test" component={Test}/>
             </Switch>
           </div>
         </Router>
