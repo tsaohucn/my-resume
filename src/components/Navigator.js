@@ -5,11 +5,11 @@ import AppBar from 'material-ui/AppBar'
 import Select from 'react-select'
 import '../App.css'
 
-export default class Navigator extends PureComponent {
+class Navigator extends PureComponent {
   constructor(props) {
     super(props)
+    this.resume = this.props.resume
     this.state = {
-      selectedOption: 'ch',
       drawer: false
     }
   }
@@ -34,10 +34,8 @@ export default class Navigator extends PureComponent {
     this.props.history.push('/project')
   }
 
-  onChange = (value) => {
-    this.setState({
-      selectedOption: value
-    })
+  onChange = (obj) => {
+    this.resume.setLangauge(obj.value)
   }
 
   render() {
@@ -65,18 +63,17 @@ export default class Navigator extends PureComponent {
         </Drawer>
         <Select
           className={'select'}
-          value={this.state.selectedOption}
           onChange={this.onChange}
           options={options}
           isSearchable={false}
-          isMulti={false}
-          autoFocus={false}
-          placeholder={'中文'}
+          placeholder={options.find(ele => ele.value === this.resume.langauge).label}
         />
       </AppBar>
     )
   }
 }
+
+export default Navigator
 
 const options = [
   { value: 'ch', label: '中文' },

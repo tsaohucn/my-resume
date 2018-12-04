@@ -12,7 +12,9 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "react-select": "^2.1.2",
-    "react-social-icons": "https://github.com/tsaohucn/react-social-icons"
+    "react-social-icons": "https://github.com/tsaohucn/react-social-icons",
+    "mobx": "^5.0.3",
+    "mobx-react": "^5.2.3"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

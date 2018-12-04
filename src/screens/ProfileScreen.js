@@ -2,16 +2,18 @@ import React, { Component } from 'react'
 import { Timeline, TimelineEvent } from 'react-event-timeline'
 import Modal from 'react-modal'
 import Iframe from 'react-iframe'
+import { inject, observer } from 'mobx-react'
 // local components
 import Layout from '../views/Layout'
 import job from '../configs/job.json'
 
 Modal.setAppElement('#root')
 
-export default class ProfileScreen extends Component {
+class ProfileScreen extends Component {
 
   constructor(props) {
     super(props)
+    this.resume = this.props.resume
     this.state = {
       jobOneDetail: false
     }
@@ -53,7 +55,7 @@ export default class ProfileScreen extends Component {
             iconColor="#808080"          
             buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
           >
-            {job.seven}
+            {job[this.resume.langauge][6]}
           </TimelineEvent>
           <TimelineEvent
             icon={'凱明'}
@@ -67,7 +69,7 @@ export default class ProfileScreen extends Component {
             iconColor="#228b22"
             buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
           >
-            {job.six}
+            {job[this.resume.langauge][5]}
           </TimelineEvent>
           <TimelineEvent
             icon={'ITRI'}
@@ -80,7 +82,7 @@ export default class ProfileScreen extends Component {
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#03a9f4"
           >
-            {job.five}
+            {job[this.resume.langauge][4]}
           </TimelineEvent>
           <TimelineEvent
             icon={'ITRI'}
@@ -94,7 +96,7 @@ export default class ProfileScreen extends Component {
             iconColor="#03a9f4"
             buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
           >
-            {job.four}
+            {job[this.resume.langauge][3]}
           </TimelineEvent>
           <TimelineEvent
             icon={'ITRI'}
@@ -108,7 +110,7 @@ export default class ProfileScreen extends Component {
             iconColor="#03a9f4"
             buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
           >
-            {job.three}
+            {job[this.resume.langauge][2]}
           </TimelineEvent>
           <TimelineEvent
             icon={'ITRI'}
@@ -122,7 +124,7 @@ export default class ProfileScreen extends Component {
             iconColor="#03a9f4"
             buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
           >
-            {job.two}
+            {job[this.resume.langauge][1]}
           </TimelineEvent>
           <TimelineEvent
             icon={'NCTU'}
@@ -136,7 +138,7 @@ export default class ProfileScreen extends Component {
             iconColor="#ffa500"
             buttons={<button type="button" onClick={this.showJobOneDetail}>詳細內容</button>}
           >
-            {job.one}
+            {job[this.resume.langauge][0]}
           </TimelineEvent>
         </Timeline>
         <Modal
@@ -157,6 +159,7 @@ export default class ProfileScreen extends Component {
   }
 }
 
+export default inject('resume')(observer(ProfileScreen))
 
 const styles = {
   timeLine: {

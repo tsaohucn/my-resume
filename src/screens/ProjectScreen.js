@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import { inject, observer } from 'mobx-react'
 // local components
 import Layout from '../views/Layout'
 
-export default class ProjectScreen extends Component {
+class ProjectScreen extends Component {
 
   constructor(props) {
     super(props)
@@ -25,6 +26,7 @@ export default class ProjectScreen extends Component {
   }
 }
 
+export default inject('resume')(observer(ProjectScreen))
 
 const styles = {
 

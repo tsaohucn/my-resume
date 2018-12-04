@@ -1,9 +1,20 @@
 {
-	"one": "The project worked when I was a master, I am responsible for building the communication system in rocket, I used C language and Texas Instruments DSP hardware, the rock band in Taiwan named `Mayday` made a song named `stubborn` for the project",
-	"two": "I am responsible for building app by Unity game engine, and also for sales, promotion, demo. Because the project is in startup early stage, so complex multi job must to do. The project finally spin-off from my origin company and got one billions of dollars investment from China's company `Alibaba`",
-	"three": "It's a app for helping pregnant women. I am responsible for PM of this project, and analysis data by Python and JAVA",
-	"four": "I am responsible for building back-end service for a app named `Tomato`, The benchmark of the app is IFTTT which can help user to automate their job in the life",
-	"five": "I am assigned to assist team for building automatic work flow. Using Docker, Ansible, Travis CI, AMS, Vagrant..any tool which can help team for accelerating development progress",
-	"six": "react-native team-leader in a mobile start-up company",
-	"seven": "rearc-native Developer in a game company of Combodia"
+  "en": [
+    "The project worked when I was a master, I am responsible for building the communication system in rocket, I used C language and Texas Instruments DSP hardware, the rock band in Taiwan named `Mayday` made a song named `stubborn` for the project",
+    "I am responsible for building app by Unity game engine, and also for sales, promotion, demo. Because the project is in startup early stage, so complex multi job must to do. The project finally spin-off from my origin company and got one billions of dollars investment from China's company `Alibaba`",
+    "It's a app for helping pregnant women. I am responsible for PM of this project, and analysis data by Python and JAVA",
+    "I am responsible for building back-end service for a app named `Tomato`, The benchmark of the app is IFTTT which can help user to automate their job in the life",
+    "I am assigned to assist team for building automatic work flow. Using Docker, Ansible, Travis CI, AMS, Vagrant..any tool which can help team for accelerating development progress",
+    "react-native team-leader in a mobile start-up company",
+    "rearc-native Developer in a game company of Combodia"
+  ],
+  "ch": [
+    "使用C語言撰寫火箭上通訊系統",
+    "數位宅裝",
+    "一個孕婦專屬的App,並使用python及JAVA進行資料分析",
+    "使用Rails撰寫Restful API",
+    "DevpOps工程師",
+    "用react-native打造交友App",
+    "用react-native打造漫畫App"
+  ]
 }

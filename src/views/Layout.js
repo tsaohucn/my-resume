@@ -8,7 +8,8 @@ import avator from '../images/avator.jpg'
 
 const Layout = (props) => {
   const { 
-    children
+    children,
+    resume
   } = props
 
   return(
@@ -20,15 +21,15 @@ const Layout = (props) => {
             <img alt={'avator'} src={avator} style={styles.avator}/>
           </div>
           <div style={styles.introduceDiv}>
-            <p style={styles.introduce}>{introduce.content}</p>
+            <p style={styles.introduce}>{introduce[resume.langauge]}</p>
           </div>
         </div>
         <div style={styles.socialBar}>
           {/*<SocialIcon style={styles.SocialIcon} url="https://www.facebook.com/tsaohucn" />*/}
+          { /*<SocialIcon style={styles.SocialIcon} url="https://www.youtube.com/c/Tsaohucn" />*/}
           <SocialIcon style={styles.SocialIcon} url="https://www.cakeresume.com/tsaohucn" />
           <SocialIcon style={styles.SocialIcon} url="https://github.com/tsaohucn" />
           <SocialIcon style={styles.SocialIcon} url="https://medium.com/@tsaohucn" />
-          { /*<SocialIcon style={styles.SocialIcon} url="https://www.youtube.com/c/Tsaohucn" />*/}
           <SocialIcon style={styles.SocialIcon} url="https://stackoverflow.com/users/5078051/tsao" />
           <SocialIcon style={styles.SocialIcon} url="https://www.kaggle.com/tsaohucn" />
           <SocialIcon style={styles.SocialIcon} url="https://www.linkedin.com/in/hsiu-chuan-tsao-623598a6/" />
