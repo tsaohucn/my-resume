@@ -1,12 +1,13 @@
 // node_module
 import React from 'react'
 import { SocialIcon } from 'react-social-icons'
+import { inject, observer } from 'mobx-react'
 // local components
 import Navigator from '../components/Navigator'
 import introduce from '../configs/introduce.json'
 import avator from '../images/avator.jpg'
 
-const Layout = (props) => {
+const Layout = inject('resume')(observer((props) => {
   const { 
     children,
     resume
@@ -38,7 +39,7 @@ const Layout = (props) => {
       </div>
     </div>
   )  
-}
+}))
 
 const styles = {
   root: {
