@@ -1,12 +1,15 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import AppBar from 'material-ui/AppBar'
+import Select from 'react-select'
+import '../App.css'
 
-export default class Navigator extends Component {
+export default class Navigator extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
+      selectedOption: 'ch',
       drawer: false
     }
   }
@@ -29,6 +32,12 @@ export default class Navigator extends Component {
 
   goToProject = () => {
     this.props.history.push('/project')
+  }
+
+  onChange = (value) => {
+    this.setState({
+      selectedOption: value
+    })
   }
 
   render() {
@@ -54,10 +63,25 @@ export default class Navigator extends Component {
               </p>
             </MenuItem>
         </Drawer>
+        <Select
+          className={'select'}
+          value={this.state.selectedOption}
+          onChange={this.onChange}
+          options={options}
+          isSearchable={false}
+          isMulti={false}
+          autoFocus={false}
+          placeholder={'中文'}
+        />
       </AppBar>
     )
   }
 }
+
+const options = [
+  { value: 'ch', label: '中文' },
+  { value: 'en', label: '英文' }
+]
 
 const styles = {
   link: {
