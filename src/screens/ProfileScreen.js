@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
-import { SocialIcon } from 'react-social-icons'
 import { Timeline, TimelineEvent } from 'react-event-timeline'
 import Modal from 'react-modal'
 import Iframe from 'react-iframe'
-
-import avator from './avator.jpg'
-import introduce from './introduce.json'
-import job from './job.json'
+// local components
+import Layout from '../views/Layout'
+import job from '../configs/job.json'
 
 Modal.setAppElement('#root')
 
-export default class App extends Component {
+export default class ProfileScreen extends Component {
 
   constructor(props) {
     super(props)
@@ -20,7 +18,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    console.log('componentDidMount')
+    //console.log('componentDidMount')
   }
 
   showJobOneDetail = () => {
@@ -36,34 +34,16 @@ export default class App extends Component {
   }
 
   onClickJobTwo = () => {
-    console.log('onClickJobTwo')
+    //console.log('onClickJobTwo')
   }
 
   render() {
     return (
-      <div style={styles.root}>
-        <div style={styles.profile}>
-          <div style={styles.avatorDiv}>
-            <img alt={'avator'} src={avator} style={styles.avator}/>
-          </div>
-          <div style={styles.introduceDiv}>
-            <p style={styles.introduce}>{introduce.content}</p>
-          </div>
-        </div>
-        <div style={styles.socialBar}>
-          <SocialIcon style={styles.SocialIcon} url="https://www.facebook.com/tsaohucn" />
-          <SocialIcon style={styles.SocialIcon} url="https://www.cakeresume.com/tsaohucn" />
-          <SocialIcon style={styles.SocialIcon} url="https://github.com/tsaohucn" />
-          <SocialIcon style={styles.SocialIcon} url="https://medium.com/@tsaohucn" />
-          <SocialIcon style={styles.SocialIcon} url="https://www.youtube.com/c/Tsaohucn" />
-          <SocialIcon style={styles.SocialIcon} url="https://stackoverflow.com/users/5078051/tsao" />
-          <SocialIcon style={styles.SocialIcon} url="https://www.kaggle.com/tsaohucn" />
-          <SocialIcon style={styles.SocialIcon} url="https://www.linkedin.com/in/hsiu-chuan-tsao-623598a6/" />
-        </div>
+      <Layout>
         <Timeline style={styles.timeLine}>
           <TimelineEvent 
             icon={'澳勝'}
-            createdAt="2013"
+            createdAt="2018"
             title="React Native Senior Engineer"
             subtitle="React Native"
             titleStyle={{fontWeight: "bold"}}
@@ -77,7 +57,7 @@ export default class App extends Component {
           </TimelineEvent>
           <TimelineEvent
             icon={'凱明'}
-            createdAt="2013"
+            createdAt="2017"
             title="React Native Junior Engineer"
             subtitle="React Native"
             titleStyle={{fontWeight: "bold"}}
@@ -163,7 +143,6 @@ export default class App extends Component {
           isOpen={this.state.jobOneDetail}
           onRequestClose={this.closeJobOneDetail}
           style={styles.jobOneDetail}
-          //contentLabel="Example Modal"
         >
           <Iframe 
             width="1280" 
@@ -171,70 +150,25 @@ export default class App extends Component {
             url="https://www.youtube.com/embed/eDzyv6XVSgY" 
             display="initial"
             position="relative"
-            //allow="autoplay; encrypted-media"
           />
         </Modal>
-      </div>
+      </Layout>
     )
   }
 }
 
 
 const styles = {
-  root: {
-    //backgroundColor: 'red',
-    display: 'flex',
-    padding: 40,
-    flexDirection: 'column'
-  },
-  profile: {
-    display: 'flex'
-  },
-  socialBar: {
-    //paddingTop: 40,
-    //backgroundColor: 'yellow',
-    justifyContent: 'center',
-    paddingBottom: 20
-  },
-  SocialIcon: {
-    marginRight: 10,
-    marginTop: 20
-  },
-  avatorDiv: {
-    display: 'flex',
-    flex: 1,
-    //backgroundColor: 'blue',
-    //justifyContent: 'center',
-    //alignItems: 'center'
-  },
-  avator: {
-    width: 200,
-    height: 200,
-    borderRadius: 100,
-    objectFit: 'cover'
-
-  },
-  introduceDiv: {
-    display: 'flex',
-    flex: 3,
-    //backgroundColor: 'green',
-    alignItems: 'center'
-  },
-  introduce: {
-    padding: 10
-  },
   timeLine: {
-    //backgroundColor: 'red',
     margin: 0,
-    //marginTop: 20
   },
   jobOneDetail: {
-    content : {
-      top                   : '50%',
-      left                  : '50%',
-      right                 : 'auto',
-      bottom                : 'auto',
-      transform             : 'translate(-50%, -50%)'
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      transform: 'translate(-50%, -50%)'
     }
   }
 }
