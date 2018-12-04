@@ -77,7 +77,7 @@ export default Navigator
 
 const options = [
   { value: 'ch', label: '中文' },
-  { value: 'en', label: '英文' }
+  { value: 'en', label: 'English' }
 ]
 
 const styles = {
