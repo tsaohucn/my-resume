@@ -18,7 +18,7 @@ export default class ProjectScreen extends Component {
 
   render() {
     return (
-      <Layout>
+      <Layout {...this.props}>
         <h1>ProjectScreen</h1>
       </Layout>
     )

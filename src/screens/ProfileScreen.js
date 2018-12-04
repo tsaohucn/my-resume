@@ -39,7 +39,7 @@ export default class ProfileScreen extends Component {
 
   render() {
     return (
-      <Layout>
+      <Layout {...this.props}>
         <Timeline style={styles.timeLine}>
           <TimelineEvent 
             icon={'澳勝'}

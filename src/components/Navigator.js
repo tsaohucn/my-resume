@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import AppBar from 'material-ui/AppBar'
@@ -24,6 +23,14 @@ export default class Navigator extends Component {
     })    
   }
 
+  goToProfile = () => {
+    this.props.history.push('/')
+  }
+
+  goToProject = () => {
+    this.props.history.push('/project')
+  }
+
   render() {
     return(
       <AppBar
@@ -36,15 +43,15 @@ export default class Navigator extends Component {
           <AppBar 
             onLeftIconButtonClick={this.closeDrawer}
           />
-            <MenuItem onClick={this.closeDrawer}>
-              <Link style={styles.link} to={"/"}>
+            <MenuItem onClick={this.goToProfile}>
+              <p style={styles.link}>
                 {'簡介'}
-              </Link>
+              </p>
             </MenuItem>
-            <MenuItem onClick={this.closeDrawer}>
-              <Link style={styles.link} to={"/project"}>
+            <MenuItem onClick={this.goToProject}>
+              <p style={styles.link}>
                 {'作品集'}
-              </Link>
+              </p>
             </MenuItem>
         </Drawer>
       </AppBar>
@@ -54,6 +61,7 @@ export default class Navigator extends Component {
 
 const styles = {
   link: {
+    display: 'inline-block',
     color: '#606060',
     textDecoration: 'none'
   }

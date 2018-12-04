@@ -13,7 +13,7 @@ const Layout = (props) => {
 
   return(
     <div style={styles.root}>
-      <Navigator/>
+      <Navigator {...props}/>
       <div style={styles.content}>
         <div style={styles.profile}>
           <div style={styles.avatorDiv}>
