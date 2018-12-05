@@ -4,17 +4,18 @@
   "private": true,
   "dependencies": {
     "material-ui": "^0.20.0",
+    "mobx": "^5.0.3",
+    "mobx-react": "^5.2.3",
     "react": "16.6.1",
     "react-dom": "^16.4.1",
     "react-event-timeline": "^1.5.1",
     "react-iframe": "^1.1.0",
+    "react-mail-form": "^1.0.2",
     "react-modal": "^3.4.2",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "react-select": "^2.1.2",
-    "react-social-icons": "https://github.com/tsaohucn/react-social-icons",
-    "mobx": "^5.0.3",
-    "mobx-react": "^5.2.3"
+    "react-social-icons": "https://github.com/tsaohucn/react-social-icons"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

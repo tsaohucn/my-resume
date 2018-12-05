@@ -29,6 +29,14 @@
   width: 10%;
 }
 
+.email {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 150px;
+  justify-content: space-between;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

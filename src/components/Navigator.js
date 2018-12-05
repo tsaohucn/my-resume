@@ -3,6 +3,7 @@ import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import AppBar from 'material-ui/AppBar'
 import Select from 'react-select'
+// local components
 import '../App.css'
 
 class Navigator extends PureComponent {
