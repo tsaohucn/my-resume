@@ -53,7 +53,7 @@ class ProfileScreen extends Component {
             iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#808080"          
-            buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
+            //buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
           >
             {job[this.resume.langauge][6]}
           </TimelineEvent>
@@ -67,7 +67,7 @@ class ProfileScreen extends Component {
             iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#228b22"
-            buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
+            //buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
           >
             {job[this.resume.langauge][5]}
           </TimelineEvent>
@@ -94,7 +94,7 @@ class ProfileScreen extends Component {
             iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#03a9f4"
-            buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
+            //buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
           >
             {job[this.resume.langauge][3]}
           </TimelineEvent>
@@ -108,7 +108,7 @@ class ProfileScreen extends Component {
             iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#03a9f4"
-            buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
+            //buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
           >
             {job[this.resume.langauge][2]}
           </TimelineEvent>
@@ -122,7 +122,7 @@ class ProfileScreen extends Component {
             iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#03a9f4"
-            buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
+            //buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
           >
             {job[this.resume.langauge][1]}
           </TimelineEvent>
@@ -136,7 +136,7 @@ class ProfileScreen extends Component {
             iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#ffa500"
-            buttons={<button type="button" onClick={this.showJobOneDetail}>詳細內容</button>}
+            //buttons={<button type="button" onClick={this.showJobOneDetail}>詳細內容</button>}
           >
             {job[this.resume.langauge][0]}
           </TimelineEvent>

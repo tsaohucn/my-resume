@@ -6,6 +6,7 @@ import { Provider } from 'mobx-react'
 import resume from './stores/resume'
 import ProfileScreen from './screens/ProfileScreen'
 import ProjectScreen from './screens/ProjectScreen'
+import ServiceScreen from './screens/ServiceScreen'
 
 export default class App extends Component {
 
@@ -19,6 +20,7 @@ export default class App extends Component {
             	<Switch>
       	        <Route exact path="/" component={ProfileScreen}/>
                 <Route exact path="/project" component={ProjectScreen}/>
+                <Route exact path="/service" component={ServiceScreen}/>
               </Switch>
           </BrowserRouter>
         </MuiThemeProvider>

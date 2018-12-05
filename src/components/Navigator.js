@@ -34,6 +34,10 @@ class Navigator extends PureComponent {
     this.props.history.push('/project')
   }
 
+  goToService = () => {
+    this.props.history.push('/service')
+  }
+
   onChange = (obj) => {
     this.resume.setLangauge(obj.value)
   }
@@ -58,6 +62,11 @@ class Navigator extends PureComponent {
             <MenuItem onClick={this.goToProject}>
               <p style={styles.link}>
                 {'作品集'}
+              </p>
+            </MenuItem>
+            <MenuItem onClick={this.goToService}>
+              <p style={styles.link}>
+                {'服務'}
               </p>
             </MenuItem>
         </Drawer>
