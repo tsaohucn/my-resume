@@ -27,10 +27,6 @@ class ProfileScreen extends Component {
     })   
   }
 
-  onClickJobTwo = () => {
-    //console.log('onClickJobTwo')
-  }
-
   render() {
     return (
       <Layout {...this.props}>
@@ -40,10 +36,11 @@ class ProfileScreen extends Component {
             createdAt="2018"
             title="React Native Senior Engineer"
             subtitle="React Native"
-            titleStyle={{fontWeight: "bold"}}
-            subtitleStyle={{color: "green"}}            
-            iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
-            bubbleStyle={{backgroundColor: "#ffffff"}}
+            titleStyle={styles.titleStyle}
+            subtitleStyle={styles.subtitleStyle}
+            contentStyle={styles.contentStyle}
+            iconStyle={styles.iconStyle}
+            bubbleStyle={styles.bubbleStyle}
             iconColor="#808080"          
           >
             {job[this.resume.langauge][6]}
@@ -53,10 +50,11 @@ class ProfileScreen extends Component {
             createdAt="2017"
             title="React Native Junior Engineer"
             subtitle="React Native"
-            titleStyle={{fontWeight: "bold"}}
-            subtitleStyle={{color: "green"}}            
-            iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
-            bubbleStyle={{backgroundColor: "#ffffff"}}
+            titleStyle={styles.titleStyle}
+            subtitleStyle={styles.subtitleStyle}
+            contentStyle={styles.contentStyle}
+            iconStyle={styles.iconStyle}
+            bubbleStyle={styles.bubbleStyle}
             iconColor="#228b22"
           >
             {job[this.resume.langauge][5]}
@@ -66,10 +64,11 @@ class ProfileScreen extends Component {
             createdAt="2016"
             title="DevOps Engineer"
             subtitle="Docker Ansible"
-            titleStyle={{fontWeight: "bold"}}
-            subtitleStyle={{color: "green"}}            
-            iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
-            bubbleStyle={{backgroundColor: "#ffffff"}}
+            titleStyle={styles.titleStyle}
+            subtitleStyle={styles.subtitleStyle}
+            contentStyle={styles.contentStyle}
+            iconStyle={styles.iconStyle}
+            bubbleStyle={styles.bubbleStyle}
             iconColor="#03a9f4"
           >
             {job[this.resume.langauge][4]}
@@ -79,10 +78,11 @@ class ProfileScreen extends Component {
             createdAt="2015"
             title="Backend Engineer"
             subtitle="Ruby on Rails"
-            titleStyle={{fontWeight: "bold"}}
-            subtitleStyle={{color: "green"}}            
-            iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
-            bubbleStyle={{backgroundColor: "#ffffff"}}
+            titleStyle={styles.titleStyle}
+            subtitleStyle={styles.subtitleStyle}
+            contentStyle={styles.contentStyle}
+            iconStyle={styles.iconStyle}
+            bubbleStyle={styles.bubbleStyle}
             iconColor="#03a9f4"
           >
             {job[this.resume.langauge][3]}
@@ -92,10 +92,11 @@ class ProfileScreen extends Component {
             createdAt="2014"
             title="Data Science Engineer"
             subtitle="Java Python Ruby"
-            titleStyle={{fontWeight: "bold"}}
-            subtitleStyle={{color: "green"}}            
-            iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
-            bubbleStyle={{backgroundColor: "#ffffff"}}
+            titleStyle={styles.titleStyle}
+            subtitleStyle={styles.subtitleStyle}
+            contentStyle={styles.contentStyle}
+            iconStyle={styles.iconStyle}
+            bubbleStyle={styles.bubbleStyle}
             iconColor="#03a9f4"
           >
             {job[this.resume.langauge][2]}
@@ -105,10 +106,11 @@ class ProfileScreen extends Component {
             createdAt="2013"
             title="Unity Junior Developer"
             subtitle="JavaScript Unity3D"
-            titleStyle={{fontWeight: "bold"}}
-            subtitleStyle={{color: "green"}}            
-            iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
-            bubbleStyle={{backgroundColor: "#ffffff"}}
+            titleStyle={styles.titleStyle}
+            subtitleStyle={styles.subtitleStyle}
+            contentStyle={styles.contentStyle}
+            iconStyle={styles.iconStyle}
+            bubbleStyle={styles.bubbleStyle}
             iconColor="#03a9f4"
           >
             {job[this.resume.langauge][1]}
@@ -118,10 +120,11 @@ class ProfileScreen extends Component {
             createdAt="2010"
             title="Rocket Researcher"
             subtitle="C"
-            titleStyle={{fontWeight: "bold"}}
-            subtitleStyle={{color: "green"}}
-            iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
-            bubbleStyle={{backgroundColor: "#ffffff"}}
+            titleStyle={styles.titleStyle}
+            subtitleStyle={styles.subtitleStyle}
+            contentStyle={styles.contentStyle}
+            iconStyle={styles.iconStyle}
+            bubbleStyle={styles.bubbleStyle}
             iconColor="#ffa500"
             //buttons={<button type="button" onClick={this.showJobOneDetail}>詳細內容</button>}
           >
@@ -147,5 +150,23 @@ const styles = {
       bottom: 'auto',
       transform: 'translate(-50%, -50%)'
     }
+  },
+  titleStyle: {
+    fontWeight: "bold",
+    fontSize: '1.5vw'
+  },
+  subtitleStyle: {
+    fontSize: '1.2vw',
+    color: "green"
+  },
+  contentStyle: {
+    fontSize: '1.2vw'
+  },
+  bubbleStyle: {
+    backgroundColor: "#ffffff"
+  },
+  iconStyle: {
+    fontSize: '0.8vw',
+    fontWeight: 'bold'
   }
 }
