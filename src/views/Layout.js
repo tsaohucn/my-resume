@@ -56,11 +56,12 @@ const styles = {
   },
   socialBar: {
     justifyContent: 'center',
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   SocialIcon: {
     marginRight: 10,
-    marginTop: 20
+    marginTop: 20,
+    //zIndex: 1
   },
   avatorDiv: {
     display: 'flex',

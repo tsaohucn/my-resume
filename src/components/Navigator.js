@@ -47,10 +47,12 @@ class Navigator extends PureComponent {
     return(
       <AppBar
         onLeftIconButtonClick={this.openDrawer}
+        style={styles.appBar}
       >
         <Drawer
           docked
           open={this.state.drawer}
+          style={styles.drawer}
         >
           <AppBar 
             onLeftIconButtonClick={this.closeDrawer}
@@ -95,5 +97,11 @@ const styles = {
     display: 'inline-block',
     color: '#606060',
     textDecoration: 'none'
+  },
+  appBar: {
+    zIndex: 1
+  },
+  drawer: {
+    //zIndex: 1
   }
 }

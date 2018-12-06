@@ -10,6 +10,7 @@ import tomato from '../images/tomato.png'
 import bacon from '../images/bacon.jpg'
 import comicbook from '../images/comicbook.jpg'
 import holdem from '../images/holdem.png'
+import '../App.css'
 
 Modal.setAppElement('#root')
 
@@ -31,20 +32,35 @@ class ProjectScreen extends Component {
 
   showProject = (project) => {
     this.setState({
+      rocket: false,
+      house: false,
+      pregnant: false,
+      tomato: false,
+      bacon: false,
+      comicbook: false,
+      holdem: false,
       [project]: true
     })
   }
 
   closeProject = (project) => {
     this.setState({
+      rocket: false,
+      house: false,
+      pregnant: false,
+      tomato: false,
+      bacon: false,
+      comicbook: false,
+      holdem: false,
       [project]: false
     })
   }
 
   render() {
     return (
-      <Layout {...this.props}>
+      <div>
         <Modal
+          style={styles.modal}
           isOpen={this.state.rocket}
           onRequestClose={() => this.closeProject('rocket')}
           contentLabel="rocket"
@@ -52,6 +68,7 @@ class ProjectScreen extends Component {
           <h1>{'rocket'}</h1>
         </Modal>
         <Modal
+          style={styles.modal}
           isOpen={this.state.house}
           onRequestClose={() => this.closeProject('house')}
           contentLabel="house"
@@ -59,6 +76,7 @@ class ProjectScreen extends Component {
           <h1>{'house'}</h1>
         </Modal>
         <Modal
+          style={styles.modal}
           isOpen={this.state.pregnant}
           onRequestClose={() => this.closeProject('pregnant')}
           contentLabel="pregnant"
@@ -66,6 +84,7 @@ class ProjectScreen extends Component {
           <h1>{'pregnant'}</h1>
         </Modal>
         <Modal
+          style={styles.modal}
           isOpen={this.state.tomato}
           onRequestClose={() => this.closeProject('tomato')}
           contentLabel="tomato"
@@ -73,6 +92,7 @@ class ProjectScreen extends Component {
           <h1>{'Tomato'}</h1>
         </Modal>
         <Modal
+          style={styles.modal}
           isOpen={this.state.bacon}
           onRequestClose={() => this.closeProject('bacon')}
           contentLabel="bacon"
@@ -80,6 +100,7 @@ class ProjectScreen extends Component {
           <h1>{'Bacon'}</h1>
         </Modal>
         <Modal
+          style={styles.modal}
           isOpen={this.state.comicbook}
           onRequestClose={() => this.closeProject('comicbook')}
           contentLabel="comicbook"
@@ -87,43 +108,46 @@ class ProjectScreen extends Component {
           <h1>{'Comicbook'}</h1>
         </Modal>
         <Modal
+          style={styles.modal}
           isOpen={this.state.holdem}
           onRequestClose={() => this.closeProject('holdem')}
           contentLabel="holdem"
         >
           <h1>{'Holdem'}</h1>
         </Modal>
-        <div style={styles.content}>
-          <div style={styles.block} onClick={() => this.showProject('rocket')}>
-            <h2>火箭計畫</h2>
-            <img alt={'rocket'} style={styles.image} src={rocket}/>
+        <Layout {...this.props}>
+          <div style={styles.content}>
+            <div style={styles.block} onClick={() => this.showProject('rocket')}>
+              <h2>火箭計畫</h2>
+              <img alt={'rocket'} style={styles.image} src={rocket}/>
+            </div>
+            <div style={styles.block} onClick={() => this.showProject('house')}>
+              <h2>數位宅粧</h2>
+              <img alt={'house'} style={styles.image} src={house}/>
+            </div>
+            <div style={styles.block} onClick={() => this.showProject('pregnant')}>
+              <h2>好孕邦</h2>
+              <img alt={'pregnant'} style={styles.image} src={pregnant}/>
+            </div>
+            <div style={styles.block} onClick={() => this.showProject('tomato')}>
+              <h2>TOMATO匠</h2>
+              <img alt={'tomato'} style={styles.image} src={tomato}/>
+            </div>
+            <div style={styles.block} onClick={() => this.showProject('bacon')}>
+              <h2>Bacon交友App</h2>
+              <img alt={'bacon'} style={styles.image} src={bacon}/>
+            </div>
+            <div style={styles.block} onClick={() => this.showProject('comicbook')}>
+              <h2>漫畫App</h2>
+              <img alt={'comicbook'} style={styles.image} src={comicbook}/>
+            </div>
+            <div style={styles.block} onClick={() => this.showProject('holdem')}>
+              <h2>德州撲克</h2>
+              <img alt={'holdem'} style={styles.image} src={holdem}/>
+            </div>
           </div>
-          <div style={styles.block} onClick={() => this.showProject('house')}>
-            <h2>數位宅粧</h2>
-            <img alt={'house'} style={styles.image} src={house}/>
-          </div>
-          <div style={styles.block} onClick={() => this.showProject('pregnant')}>
-            <h2>好孕邦</h2>
-            <img alt={'pregnant'} style={styles.image} src={pregnant}/>
-          </div>
-          <div style={styles.block} onClick={() => this.showProject('tomato')}>
-            <h2>TOMATO匠</h2>
-            <img alt={'tomato'} style={styles.image} src={tomato}/>
-          </div>
-          <div style={styles.block} onClick={() => this.showProject('bacon')}>
-            <h2>Bacon交友App</h2>
-            <img alt={'bacon'} style={styles.image} src={bacon}/>
-          </div>
-          <div style={styles.block} onClick={() => this.showProject('comicbook')}>
-            <h2>漫畫App</h2>
-            <img alt={'comicbook'} style={styles.image} src={comicbook}/>
-          </div>
-          <div style={styles.block} onClick={() => this.showProject('holdem')}>
-            <h2>德州撲克</h2>
-            <img alt={'holdem'} style={styles.image} src={holdem}/>
-          </div>
-        </div>
-      </Layout>
+        </Layout>
+      </div>
     )
   }
 }
@@ -139,7 +163,6 @@ const styles = {
     justifyContent: 'space-between' 
   },
   block: {
-    //backgroundColor:'red',
     width: '30%',
     aspectRatio: 2
   },
@@ -147,5 +170,10 @@ const styles = {
     objectFit: 'contain',
     width: '100%',
     maxHeight: 250
+  },
+  modal: { 
+    overlay: {
+      zIndex: 2
+    }
   }
 }
