@@ -1,13 +1,9 @@
 import React, { Component } from 'react'
 import { Timeline, TimelineEvent } from 'react-event-timeline'
-import Modal from 'react-modal'
-import Iframe from 'react-iframe'
 import { inject, observer } from 'mobx-react'
 // local components
 import Layout from '../views/Layout'
 import job from '../configs/job.json'
-
-Modal.setAppElement('#root')
 
 class ProfileScreen extends Component {
 
@@ -17,10 +13,6 @@ class ProfileScreen extends Component {
     this.state = {
       jobOneDetail: false
     }
-  }
-
-  componentDidMount() {
-    //console.log('componentDidMount')
   }
 
   showJobOneDetail = () => {
@@ -53,7 +45,6 @@ class ProfileScreen extends Component {
             iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#808080"          
-            //buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
           >
             {job[this.resume.langauge][6]}
           </TimelineEvent>
@@ -67,7 +58,6 @@ class ProfileScreen extends Component {
             iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#228b22"
-            //buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
           >
             {job[this.resume.langauge][5]}
           </TimelineEvent>
@@ -94,7 +84,6 @@ class ProfileScreen extends Component {
             iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#03a9f4"
-            //buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
           >
             {job[this.resume.langauge][3]}
           </TimelineEvent>
@@ -108,7 +97,6 @@ class ProfileScreen extends Component {
             iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#03a9f4"
-            //buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
           >
             {job[this.resume.langauge][2]}
           </TimelineEvent>
@@ -122,7 +110,6 @@ class ProfileScreen extends Component {
             iconStyle={{fontSize: '0.4vw',fontWeight: 'bold'}}
             bubbleStyle={{backgroundColor: "#ffffff"}}
             iconColor="#03a9f4"
-            //buttons={<button type="button" onClick={this.onClickJobTwo}>詳細內容</button>}
           >
             {job[this.resume.langauge][1]}
           </TimelineEvent>
@@ -141,19 +128,6 @@ class ProfileScreen extends Component {
             {job[this.resume.langauge][0]}
           </TimelineEvent>
         </Timeline>
-        <Modal
-          isOpen={this.state.jobOneDetail}
-          onRequestClose={this.closeJobOneDetail}
-          style={styles.jobOneDetail}
-        >
-          <Iframe 
-            width="1280" 
-            height="720" 
-            url="https://www.youtube.com/embed/eDzyv6XVSgY" 
-            display="initial"
-            position="relative"
-          />
-        </Modal>
       </Layout>
     )
   }
