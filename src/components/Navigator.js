@@ -59,7 +59,7 @@ class Navigator extends PureComponent {
           />
             <MenuItem onClick={this.goToProfile}>
               <p style={styles.link}>
-                {'簡介'}
+                {'經歷'}
               </p>
             </MenuItem>
             <MenuItem onClick={this.goToProject}>

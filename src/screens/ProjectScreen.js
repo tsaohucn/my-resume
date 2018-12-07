@@ -7,9 +7,11 @@ import rocket from '../images/rocket.png'
 import house from '../images/house.jpg'
 import pregnant from '../images/pregnant.png'
 import tomato from '../images/tomato.png'
+import tomato1 from '../images/tomato1.png'
 import bacon from '../images/bacon.jpg'
 import comicbook from '../images/comicbook.jpg'
 import holdem from '../images/holdem.png'
+import project from '../configs/project.json'
 import '../App.css'
 
 Modal.setAppElement('#root')
@@ -61,43 +63,11 @@ class ProjectScreen extends Component {
       <div>
         <Modal
           style={styles.modal}
-          isOpen={this.state.rocket}
-          onRequestClose={() => this.closeProject('rocket')}
-          contentLabel="rocket"
+          isOpen={this.state.holdem}
+          onRequestClose={() => this.closeProject('holdem')}
+          contentLabel="holdem"
         >
-          <h1>{'rocket'}</h1>
-        </Modal>
-        <Modal
-          style={styles.modal}
-          isOpen={this.state.house}
-          onRequestClose={() => this.closeProject('house')}
-          contentLabel="house"
-        >
-          <h1>{'house'}</h1>
-        </Modal>
-        <Modal
-          style={styles.modal}
-          isOpen={this.state.pregnant}
-          onRequestClose={() => this.closeProject('pregnant')}
-          contentLabel="pregnant"
-        >
-          <h1>{'pregnant'}</h1>
-        </Modal>
-        <Modal
-          style={styles.modal}
-          isOpen={this.state.tomato}
-          onRequestClose={() => this.closeProject('tomato')}
-          contentLabel="tomato"
-        >
-          <h1>{'Tomato'}</h1>
-        </Modal>
-        <Modal
-          style={styles.modal}
-          isOpen={this.state.bacon}
-          onRequestClose={() => this.closeProject('bacon')}
-          contentLabel="bacon"
-        >
-          <h1>{'Bacon'}</h1>
+          <h1>{'Holdem'}</h1>
         </Modal>
         <Modal
           style={styles.modal}
@@ -109,41 +79,81 @@ class ProjectScreen extends Component {
         </Modal>
         <Modal
           style={styles.modal}
-          isOpen={this.state.holdem}
-          onRequestClose={() => this.closeProject('holdem')}
-          contentLabel="holdem"
+          isOpen={this.state.bacon}
+          onRequestClose={() => this.closeProject('bacon')}
+          contentLabel="bacon"
         >
-          <h1>{'Holdem'}</h1>
+          <h1>{'Bacon'}</h1>
+        </Modal>
+        <Modal
+          style={styles.modal}
+          isOpen={this.state.tomato}
+          onRequestClose={() => this.closeProject('tomato')}
+          contentLabel="tomato"
+        >
+          <h3 style={styles.h3}>TOMATO匠App</h3>
+          <a style={styles.link} href={'https://play.google.com/store/apps/details?id=org.itri.tomato'}>{'(App連結)'}</a>
+          <p>{project[this.resume.langauge][3]}</p>
+          <img alt={'tomato1'} style={styles.image1} src={tomato1}/>
+        </Modal>
+        <Modal
+          style={styles.modal}
+          isOpen={this.state.pregnant}
+          onRequestClose={() => this.closeProject('pregnant')}
+          contentLabel="pregnant"
+        >
+          <h3 style={styles.h3}>好孕邦App</h3>
+          <a style={styles.link} href={'https://play.google.com/store/apps/details?id=com.lesenphants.le'}>{'(App連結)'}</a>
+          <p>{project[this.resume.langauge][4]}</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/IMzdEVM87A8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </Modal>
+        <Modal
+          style={styles.modal}
+          isOpen={this.state.house}
+          onRequestClose={() => this.closeProject('house')}
+          contentLabel="house"
+        >
+          <h1>{'house'}</h1>
+        </Modal>
+        <Modal
+          style={styles.modal}
+          isOpen={this.state.rocket}
+          onRequestClose={() => this.closeProject('rocket')}
+          contentLabel="rocket"
+        >
+          <h3>打造火箭通訊系統</h3>
+          <p>{project[this.resume.langauge][6]}</p>
+          <iframe style={styles.iframe} width="560" height="315" src="https://www.youtube.com/embed/GYtf4dKOiHw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Modal>
         <Layout {...this.props}>
           <div style={styles.content}>
-            <div style={styles.block} onClick={() => this.showProject('rocket')}>
-              <h2>火箭計畫</h2>
-              <img alt={'rocket'} style={styles.image} src={rocket}/>
+            <div style={styles.block} onClick={() => this.showProject('holdem')}>
+              <h2>德州撲克</h2>
+              <img alt={'holdem'} style={styles.image} src={holdem}/>
             </div>
-            <div style={styles.block} onClick={() => this.showProject('house')}>
-              <h2>數位宅粧</h2>
-              <img alt={'house'} style={styles.image} src={house}/>
+            <div style={styles.block} onClick={() => this.showProject('comicbook')}>
+              <h2>漫畫專案</h2>
+              <img alt={'comicbook'} style={styles.image} src={comicbook}/>
             </div>
-            <div style={styles.block} onClick={() => this.showProject('pregnant')}>
-              <h2>好孕邦</h2>
-              <img alt={'pregnant'} style={styles.image} src={pregnant}/>
+            <div style={styles.block} onClick={() => this.showProject('bacon')}>
+              <h2>Bacon交友</h2>
+              <img alt={'bacon'} style={styles.image} src={bacon}/>
             </div>
             <div style={styles.block} onClick={() => this.showProject('tomato')}>
               <h2>TOMATO匠</h2>
               <img alt={'tomato'} style={styles.image} src={tomato}/>
             </div>
-            <div style={styles.block} onClick={() => this.showProject('bacon')}>
-              <h2>Bacon交友App</h2>
-              <img alt={'bacon'} style={styles.image} src={bacon}/>
+            <div style={styles.block} onClick={() => this.showProject('pregnant')}>
+              <h2>好孕邦</h2>
+              <img alt={'pregnant'} style={styles.image} src={pregnant}/>
             </div>
-            <div style={styles.block} onClick={() => this.showProject('comicbook')}>
-              <h2>漫畫App</h2>
-              <img alt={'comicbook'} style={styles.image} src={comicbook}/>
+            <div style={styles.block} onClick={() => this.showProject('house')}>
+              <h2>數位宅粧</h2>
+              <img alt={'house'} style={styles.image} src={house}/>
             </div>
-            <div style={styles.block} onClick={() => this.showProject('holdem')}>
-              <h2>德州撲克</h2>
-              <img alt={'holdem'} style={styles.image} src={holdem}/>
+            <div style={styles.block} onClick={() => this.showProject('rocket')}>
+              <h2>火箭前瞻計畫</h2>
+              <img alt={'rocket'} style={styles.image} src={rocket}/>
             </div>
           </div>
         </Layout>
@@ -171,9 +181,20 @@ const styles = {
     width: '100%',
     maxHeight: 250
   },
+  image1: {
+    objectFit: 'contain',
+    width: '100%'
+  },
   modal: { 
     overlay: {
       zIndex: 2
     }
+  },
+  link: {
+    textDecoration: 'none'
+  },
+  h3: {
+    display: 'inline',
+    marginRight: 10
   }
 }

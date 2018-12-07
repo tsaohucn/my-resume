@@ -43,7 +43,7 @@ class ProfileScreen extends Component {
             bubbleStyle={styles.bubbleStyle}
             iconColor="#808080"          
           >
-            {job[this.resume.langauge][6]}
+            {job[this.resume.langauge][0]}
           </TimelineEvent>
           <TimelineEvent
             icon={'凱明'}
@@ -57,7 +57,7 @@ class ProfileScreen extends Component {
             bubbleStyle={styles.bubbleStyle}
             iconColor="#228b22"
           >
-            {job[this.resume.langauge][5]}
+            {job[this.resume.langauge][1]}
           </TimelineEvent>
           <TimelineEvent
             icon={'ITRI'}
@@ -71,7 +71,7 @@ class ProfileScreen extends Component {
             bubbleStyle={styles.bubbleStyle}
             iconColor="#03a9f4"
           >
-            {job[this.resume.langauge][4]}
+            {job[this.resume.langauge][2]}
           </TimelineEvent>
           <TimelineEvent
             icon={'ITRI'}
@@ -99,7 +99,7 @@ class ProfileScreen extends Component {
             bubbleStyle={styles.bubbleStyle}
             iconColor="#03a9f4"
           >
-            {job[this.resume.langauge][2]}
+            {job[this.resume.langauge][4]}
           </TimelineEvent>
           <TimelineEvent
             icon={'ITRI'}
@@ -113,7 +113,7 @@ class ProfileScreen extends Component {
             bubbleStyle={styles.bubbleStyle}
             iconColor="#03a9f4"
           >
-            {job[this.resume.langauge][1]}
+            {job[this.resume.langauge][5]}
           </TimelineEvent>
           <TimelineEvent
             icon={'NCTU'}
@@ -128,7 +128,7 @@ class ProfileScreen extends Component {
             iconColor="#ffa500"
             //buttons={<button type="button" onClick={this.showJobOneDetail}>詳細內容</button>}
           >
-            {job[this.resume.langauge][0]}
+            {job[this.resume.langauge][6]}
           </TimelineEvent>
         </Timeline>
       </Layout>
