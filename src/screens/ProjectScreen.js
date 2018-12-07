@@ -67,7 +67,9 @@ class ProjectScreen extends Component {
           onRequestClose={() => this.closeProject('holdem')}
           contentLabel="holdem"
         >
-          <h1>{'Holdem'}</h1>
+          <h3>德州撲克</h3>
+          <p>{project[this.resume.langauge][0]}</p>
+          <iframe title={'holdem'} width="560" height="315" src="https://www.youtube.com/embed/dB2gIhYty2M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Modal>
         <Modal
           style={styles.modal}
@@ -93,7 +95,7 @@ class ProjectScreen extends Component {
         >
           <h3 style={styles.h3}>TOMATO匠App</h3>
           <a style={styles.link} href={'https://play.google.com/store/apps/details?id=org.itri.tomato'}>{'(App連結)'}</a>
-          <p>{project[this.resume.langauge][3]}</p>
+          <p>{project[this.resume.langauge][4]}</p>
           <img alt={'tomato1'} style={styles.image1} src={tomato1}/>
         </Modal>
         <Modal
@@ -104,8 +106,8 @@ class ProjectScreen extends Component {
         >
           <h3 style={styles.h3}>好孕邦App</h3>
           <a style={styles.link} href={'https://play.google.com/store/apps/details?id=com.lesenphants.le'}>{'(App連結)'}</a>
-          <p>{project[this.resume.langauge][4]}</p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/IMzdEVM87A8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>{project[this.resume.langauge][5]}</p>
+          <iframe title={'pregnant'} width="560" height="315" src="https://www.youtube.com/embed/IMzdEVM87A8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Modal>
         <Modal
           style={styles.modal}
@@ -113,7 +115,9 @@ class ProjectScreen extends Component {
           onRequestClose={() => this.closeProject('house')}
           contentLabel="house"
         >
-          <h1>{'house'}</h1>
+          <h3 style={styles.h3}>數位宅粧</h3>
+          <p>{project[this.resume.langauge][6]}</p>
+          <iframe title={'house'} width="560" height="315" src="https://www.youtube.com/embed/hW8GHtPwdm4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Modal>
         <Modal
           style={styles.modal}
@@ -122,8 +126,8 @@ class ProjectScreen extends Component {
           contentLabel="rocket"
         >
           <h3>打造火箭通訊系統</h3>
-          <p>{project[this.resume.langauge][6]}</p>
-          <iframe style={styles.iframe} width="560" height="315" src="https://www.youtube.com/embed/GYtf4dKOiHw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>{project[this.resume.langauge][7]}</p>
+          <iframe title={'rocket'} style={styles.iframe} width="560" height="315" src="https://www.youtube.com/embed/GYtf4dKOiHw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Modal>
         <Layout {...this.props}>
           <div style={styles.content}>
