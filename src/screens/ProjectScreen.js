@@ -85,7 +85,9 @@ class ProjectScreen extends Component {
           onRequestClose={() => this.closeProject('bacon')}
           contentLabel="bacon"
         >
-          <h1>{'Bacon'}</h1>
+          <h3>Bacon</h3>
+          <p>{project[this.resume.langauge][2]}</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/LIDvHqWoRVU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Modal>
         <Modal
           style={styles.modal}
