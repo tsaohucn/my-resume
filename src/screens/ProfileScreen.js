@@ -157,7 +157,7 @@ const styles = {
   },
   subtitleStyle: {
     fontSize: '1.2vw',
-    color: "green"
+    color: "#008000"
   },
   contentStyle: {
     fontSize: '1.2vw'
