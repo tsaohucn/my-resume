@@ -49,7 +49,7 @@ class ProfileScreen extends Component {
             icon={'凱明'}
             createdAt="2017"
             title="React Native Junior Engineer"
-            subtitle="React Native"
+            subtitle="React Native、Firebase"
             titleStyle={styles.titleStyle}
             subtitleStyle={styles.subtitleStyle}
             contentStyle={styles.contentStyle}
@@ -63,7 +63,7 @@ class ProfileScreen extends Component {
             icon={'ITRI'}
             createdAt="2016"
             title="DevOps Engineer"
-            subtitle="Docker Ansible"
+            subtitle="Docker、Ansible"
             titleStyle={styles.titleStyle}
             subtitleStyle={styles.subtitleStyle}
             contentStyle={styles.contentStyle}
@@ -91,7 +91,7 @@ class ProfileScreen extends Component {
             icon={'ITRI'}
             createdAt="2014"
             title="Data Science Engineer"
-            subtitle="Java Python Ruby"
+            subtitle="Java、Python、Ruby"
             titleStyle={styles.titleStyle}
             subtitleStyle={styles.subtitleStyle}
             contentStyle={styles.contentStyle}
@@ -104,8 +104,8 @@ class ProfileScreen extends Component {
           <TimelineEvent
             icon={'ITRI'}
             createdAt="2013"
-            title="Unity Junior Developer"
-            subtitle="JavaScript Unity3D"
+            title="Business Designer"
+            subtitle="Design Thinking"
             titleStyle={styles.titleStyle}
             subtitleStyle={styles.subtitleStyle}
             contentStyle={styles.contentStyle}

@@ -10,13 +10,13 @@
     "The project worked when I was a master, I am responsible for building the communication system in rocket, I used C language and Texas Instruments DSP hardware, the rock band in Taiwan named `Mayday` made a song named `stubborn` for the project"
   ],
   "ch": [
-    "用react-native打造德州撲克App",
-    "用react-native打造漫畫App",
-    "用react-native打造交友App",
+    "此App為我用React Native打造的iPad端App，用來幫助協會裁判上桌與記籌碼用",
+    "此專案為我在傲勝遊戲公司負責的專案，負責內容為用React Native打造看漫畫App裡的動畫手勢組件",
+    "此為我在新創公司，與另一位工程師，兩人合力用React Native打造的交友App",
     "DevpOps工程師",
-    "使用Rails撰寫Restful API",
-    "一個孕婦專屬的App,並使用python及JAVA進行資料分析",
-    "數位宅裝",
-    "使用C語言撰寫火箭上通訊系統"
+    "此專案為我在工研院時執行，負責內容為使用Ruby on Rails撰寫App後端的Restful API",
+    "此專案為我在工研院時執行，付責使用Python及JAVA進行App回傳的資料分析，並撰寫爬蟲爬取個大論壇孕婦相關資料進行分析",
+    "此專案為我在工研院時執行，負責專案的服務設計",
+    "此專案為我在交大碩士時執行之專案，負責使用C語言撰寫火箭上通訊系統"
   ]
 }
