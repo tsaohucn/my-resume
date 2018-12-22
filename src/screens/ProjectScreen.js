@@ -67,7 +67,7 @@ class ProjectScreen extends Component {
           onRequestClose={() => this.closeProject('holdem')}
           contentLabel="holdem"
         >
-          <h3>德州撲克</h3>
+          <h3>{'德州撲克'}</h3>
           <p>{project[this.resume.langauge][0]}</p>
           <iframe title={'holdem'} width="560" height="315" src="https://www.youtube.com/embed/dB2gIhYty2M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Modal>
@@ -77,7 +77,9 @@ class ProjectScreen extends Component {
           onRequestClose={() => this.closeProject('comicbook')}
           contentLabel="comicbook"
         >
-          <h1>{'Comicbook'}</h1>
+          <h3>{'漫畫'}</h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/jObYE-fXkJU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/iqn0iq-qwtk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Modal>
         <Modal
           style={styles.modal}
@@ -85,7 +87,7 @@ class ProjectScreen extends Component {
           onRequestClose={() => this.closeProject('bacon')}
           contentLabel="bacon"
         >
-          <h3>Bacon</h3>
+          <h3>{'Bacon交友'}</h3>
           <p>{project[this.resume.langauge][2]}</p>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/LIDvHqWoRVU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Modal>
@@ -95,7 +97,7 @@ class ProjectScreen extends Component {
           onRequestClose={() => this.closeProject('tomato')}
           contentLabel="tomato"
         >
-          <h3 style={styles.h3}>TOMATO匠App</h3>
+          <h3 style={styles.h3}>{'TOMATO匠智慧生活助手'}</h3>
           <a style={styles.link} href={'https://play.google.com/store/apps/details?id=org.itri.tomato'}>{'(App連結)'}</a>
           <p>{project[this.resume.langauge][4]}</p>
           <img alt={'tomato1'} style={styles.image1} src={tomato1}/>
@@ -106,7 +108,7 @@ class ProjectScreen extends Component {
           onRequestClose={() => this.closeProject('pregnant')}
           contentLabel="pregnant"
         >
-          <h3 style={styles.h3}>好孕邦App</h3>
+          <h3 style={styles.h3}>{'好孕邦App'}</h3>
           <a style={styles.link} href={'https://play.google.com/store/apps/details?id=com.lesenphants.le'}>{'(App連結)'}</a>
           <p>{project[this.resume.langauge][5]}</p>
           <iframe title={'pregnant'} width="560" height="315" src="https://www.youtube.com/embed/IMzdEVM87A8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -117,7 +119,7 @@ class ProjectScreen extends Component {
           onRequestClose={() => this.closeProject('house')}
           contentLabel="house"
         >
-          <h3 style={styles.h3}>數位宅粧</h3>
+          <h3 style={styles.h3}>{'數位宅粧'}</h3>
           <p>{project[this.resume.langauge][6]}</p>
           <iframe title={'house'} width="560" height="315" src="https://www.youtube.com/embed/hW8GHtPwdm4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Modal>
@@ -127,38 +129,38 @@ class ProjectScreen extends Component {
           onRequestClose={() => this.closeProject('rocket')}
           contentLabel="rocket"
         >
-          <h3>打造火箭通訊系統</h3>
+          <h3>{'打造火箭通訊系統'}</h3>
           <p>{project[this.resume.langauge][7]}</p>
           <iframe title={'rocket'} style={styles.iframe} width="560" height="315" src="https://www.youtube.com/embed/GYtf4dKOiHw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Modal>
         <Layout {...this.props}>
           <div style={styles.content}>
             <div style={styles.block} onClick={() => this.showProject('holdem')}>
-              <h2>德州撲克</h2>
+              <h2>{'德州撲克'}</h2>
               <img alt={'holdem'} style={styles.image} src={holdem}/>
             </div>
             <div style={styles.block} onClick={() => this.showProject('comicbook')}>
-              <h2>漫畫專案</h2>
+              <h2>{'漫畫專案'}</h2>
               <img alt={'comicbook'} style={styles.image} src={comicbook}/>
             </div>
             <div style={styles.block} onClick={() => this.showProject('bacon')}>
-              <h2>Bacon交友</h2>
+              <h2>{'Bacon交友'}</h2>
               <img alt={'bacon'} style={styles.image} src={bacon}/>
             </div>
             <div style={styles.block} onClick={() => this.showProject('tomato')}>
-              <h2>TOMATO匠</h2>
+              <h2>{'TOMATO匠'}</h2>
               <img alt={'tomato'} style={styles.image} src={tomato}/>
             </div>
             <div style={styles.block} onClick={() => this.showProject('pregnant')}>
-              <h2>好孕邦</h2>
+              <h2>{'好孕邦'}</h2>
               <img alt={'pregnant'} style={styles.image} src={pregnant}/>
             </div>
             <div style={styles.block} onClick={() => this.showProject('house')}>
-              <h2>數位宅粧</h2>
+              <h2>{'數位宅粧'}</h2>
               <img alt={'house'} style={styles.image} src={house}/>
             </div>
             <div style={styles.block} onClick={() => this.showProject('rocket')}>
-              <h2>火箭前瞻計畫</h2>
+              <h2>{'火箭前瞻計畫'}</h2>
               <img alt={'rocket'} style={styles.image} src={rocket}/>
             </div>
           </div>
