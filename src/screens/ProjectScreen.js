@@ -103,7 +103,7 @@ class ProjectScreen extends Component {
         >
           <h3 style={styles.title}>{'TOMATO匠App   '}<p style={styles.subTitle}>{'智慧生活助手'}</p></h3>
           <h5 style={styles.tech}>{'Ruby on Rails'}</h5>
-          <p>{project[this.resume.langauge][4]}</p>
+          <p>{project[this.resume.langauge][3]}</p>
           <a style={styles.link} href={'https://play.google.com/store/apps/details?id=org.itri.tomato'}>{'(App連結)'}</a>
           <img alt={'tomato1'} style={styles.image1} src={tomato1}/>
         </Modal>
@@ -115,7 +115,7 @@ class ProjectScreen extends Component {
         >
           <h3 style={styles.title}>{'好孕邦App   '}<p style={styles.subTitle}>{'孕婦助手'}</p></h3>
           <h5 style={styles.tech}>{'Java、Python、Ruby、MongoDb'}</h5>
-          <p>{project[this.resume.langauge][5]}</p>
+          <p>{project[this.resume.langauge][4]}</p>
           <a style={styles.link} href={'https://play.google.com/store/apps/details?id=com.lesenphants.le'}>{'(App連結)'}</a>
           <iframe title={'pregnant'} width="560" height="315" src="https://www.youtube.com/embed/IMzdEVM87A8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Modal>
@@ -127,7 +127,7 @@ class ProjectScreen extends Component {
         >
           <h3 style={styles.title}>{'數位宅粧擴增實境App   '}<p style={styles.subTitle}>{'房仲賣屋助手'}</p></h3>
           <h5 style={styles.tech}>{'服務設計'}</h5>
-          <p>{project[this.resume.langauge][6]}</p>
+          <p>{project[this.resume.langauge][5]}</p>
           <iframe title={'house'} width="560" height="315" src="https://www.youtube.com/embed/hW8GHtPwdm4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Modal>
         <Modal
@@ -138,7 +138,7 @@ class ProjectScreen extends Component {
         >
           <h3 style={styles.title}>{'打造火箭通訊系統   '}<p style={styles.subTitle}>{'台灣完全自造火箭'}</p></h3>
           <h5 style={styles.tech}>{'C'}</h5>
-          <p>{project[this.resume.langauge][7]}</p>
+          <p>{project[this.resume.langauge][6]}</p>
           <iframe title={'rocket'} style={styles.iframe} width="560" height="315" src="https://www.youtube.com/embed/GYtf4dKOiHw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Modal>
         <Layout {...this.props}>
