@@ -4,6 +4,7 @@ import Modal from 'react-modal'
 // local components
 import Layout from '../views/Layout'
 import '../App.css'
+import service from '../configs/service.json'
 
 Modal.setAppElement('#root')
 
@@ -14,31 +15,26 @@ class ServiceScreen extends Component {
     this.resume = this.props.resume
   }
 
-  componentDidMount() {
-    //console.log('componentDidMount')
-  }
-
-
   render() {
     return (
       <Layout {...this.props}>
-        <h1>客製化軟件</h1>
+        <h1>{service[this.resume.langauge][0]}</h1>
         <table border={2} style={styles.table}>
           <tr>
-            <th>聯絡資訊</th>
-            <th>內容</th>
+            <th align={'left'}>{service[this.resume.langauge][1]}</th>
+            <th align={'left'}>{service[this.resume.langauge][2]}</th>
           </tr>
           <tr>
-            <td>Email</td>
-            <td>tsaohucn@gmail.com</td>
+            <td>{service[this.resume.langauge][3]}</td>
+            <td>{'tsaohucn@gmail.com'}</td>
           </tr>
           <tr>
-            <td>Line</td>
-            <td>tsaohucn</td>
+            <td>{service[this.resume.langauge][4]}</td>
+            <td>{'tsaohucn'}</td>
           </tr>
           <tr>
-            <td>手機</td>
-            <td>0933168617</td>
+            <td>{service[this.resume.langauge][5]}</td>
+            <td>{'0933168617'}</td>
           </tr>
         </table>
       </Layout>

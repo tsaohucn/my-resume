@@ -12,6 +12,7 @@ import bacon from '../images/bacon.jpg'
 import comicbook from '../images/comicbook.jpg'
 import holdem from '../images/holdem.png'
 import project from '../configs/project.json'
+import projectTitle from '../configs/projectTitle.json'
 import '../App.css'
 
 Modal.setAppElement('#root')
@@ -67,7 +68,7 @@ class ProjectScreen extends Component {
           onRequestClose={() => this.closeProject('holdem')}
           contentLabel="holdem"
         >
-          <h3 style={styles.title}>{'德州撲克App   '}<p style={styles.subTitle}>{'裁判開桌好幫手'}</p></h3>
+          <h3 style={styles.title}>{projectTitle[this.resume.langauge][0] + '   '}</h3>
           <h5 style={styles.tech}>{'React Native、Firebase'}</h5>
           <p>{project[this.resume.langauge][0]}</p>
           <iframe title={'holdem'} width="560" height="315" src="https://www.youtube.com/embed/dB2gIhYty2M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -78,7 +79,7 @@ class ProjectScreen extends Component {
           onRequestClose={() => this.closeProject('comicbook')}
           contentLabel="comicbook"
         >
-          <h3 style={styles.title}>{'漫畫App   '}<p style={styles.subTitle}>{'一起來看漫畫'}</p></h3>
+          <h3 style={styles.title}>{projectTitle[this.resume.langauge][1] + '   '}</h3>
           <h5 style={styles.tech}>{'React Native、MongoDb'}</h5>
           <p>{project[this.resume.langauge][1]}</p>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/jObYE-fXkJU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -90,7 +91,7 @@ class ProjectScreen extends Component {
           onRequestClose={() => this.closeProject('bacon')}
           contentLabel="bacon"
         >
-          <h3 style={styles.title}>{'Bacon交友App   '}<p style={styles.subTitle}>{'安心約會無煩惱'}</p></h3>
+          <h3 style={styles.title}>{projectTitle[this.resume.langauge][2] + '   '}</h3>
           <h5 style={styles.tech}>{'React Native、Firebase'}</h5>
           <p>{project[this.resume.langauge][2]}</p>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/LIDvHqWoRVU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -101,7 +102,7 @@ class ProjectScreen extends Component {
           onRequestClose={() => this.closeProject('tomato')}
           contentLabel="tomato"
         >
-          <h3 style={styles.title}>{'TOMATO匠App   '}<p style={styles.subTitle}>{'智慧生活助手'}</p></h3>
+          <h3 style={styles.title}>{projectTitle[this.resume.langauge][3] + '   '}</h3>
           <h5 style={styles.tech}>{'Ruby on Rails'}</h5>
           <p>{project[this.resume.langauge][3]}</p>
           <a style={styles.link} href={'https://play.google.com/store/apps/details?id=org.itri.tomato'}>{'(App連結)'}</a>
@@ -113,7 +114,7 @@ class ProjectScreen extends Component {
           onRequestClose={() => this.closeProject('pregnant')}
           contentLabel="pregnant"
         >
-          <h3 style={styles.title}>{'好孕邦App   '}<p style={styles.subTitle}>{'孕婦助手'}</p></h3>
+          <h3 style={styles.title}>{projectTitle[this.resume.langauge][4] + '   '}</h3>
           <h5 style={styles.tech}>{'Java、Python、Ruby、MongoDb'}</h5>
           <p>{project[this.resume.langauge][4]}</p>
           <a style={styles.link} href={'https://play.google.com/store/apps/details?id=com.lesenphants.le'}>{'(App連結)'}</a>
@@ -125,7 +126,7 @@ class ProjectScreen extends Component {
           onRequestClose={() => this.closeProject('house')}
           contentLabel="house"
         >
-          <h3 style={styles.title}>{'數位宅粧擴增實境App   '}<p style={styles.subTitle}>{'房仲賣屋助手'}</p></h3>
+          <h3 style={styles.title}>{projectTitle[this.resume.langauge][5] + '   '}</h3>
           <h5 style={styles.tech}>{'服務設計'}</h5>
           <p>{project[this.resume.langauge][5]}</p>
           <iframe title={'house'} width="560" height="315" src="https://www.youtube.com/embed/hW8GHtPwdm4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -136,7 +137,7 @@ class ProjectScreen extends Component {
           onRequestClose={() => this.closeProject('rocket')}
           contentLabel="rocket"
         >
-          <h3 style={styles.title}>{'打造火箭通訊系統   '}<p style={styles.subTitle}>{'台灣完全自造火箭'}</p></h3>
+          <h3 style={styles.title}>{projectTitle[this.resume.langauge][6] + '   '}</h3>
           <h5 style={styles.tech}>{'C'}</h5>
           <p>{project[this.resume.langauge][6]}</p>
           <iframe title={'rocket'} style={styles.iframe} width="560" height="315" src="https://www.youtube.com/embed/GYtf4dKOiHw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -144,31 +145,31 @@ class ProjectScreen extends Component {
         <Layout {...this.props}>
           <div style={styles.content}>
             <div style={styles.blockTop} onClick={() => this.showProject('holdem')}>
-              <h3 style={styles.contentTitle}>{'德州撲克App'}</h3>
+              <h3 style={styles.contentTitle}>{projectTitle[this.resume.langauge][0]}</h3>
               <img alt={'holdem'} style={styles.image} src={holdem}/>
             </div>
             <div style={styles.blockTop} onClick={() => this.showProject('comicbook')}>
-              <h3 style={styles.contentTitle}>{'看漫畫App'}</h3>
+              <h3 style={styles.contentTitle}>{projectTitle[this.resume.langauge][1]}</h3>
               <img alt={'comicbook'} style={styles.image} src={comicbook}/>
             </div>
             <div style={styles.blockTop} onClick={() => this.showProject('bacon')}>
-              <h3 style={styles.contentTitle}>{'Bacon交友App'}</h3>
+              <h3 style={styles.contentTitle}>{projectTitle[this.resume.langauge][2]}</h3>
               <img alt={'bacon'} style={styles.image} src={bacon}/>
             </div>
             <div style={styles.block} onClick={() => this.showProject('tomato')}>
-              <h3 style={styles.contentTitle}>{'TOMATO匠App'}</h3>
+              <h3 style={styles.contentTitle}>{projectTitle[this.resume.langauge][3]}</h3>
               <img alt={'tomato'} style={styles.image} src={tomato}/>
             </div>
             <div style={styles.block} onClick={() => this.showProject('pregnant')}>
-              <h3 style={styles.contentTitle}>{'好孕邦App'}</h3>
+              <h3 style={styles.contentTitle}>{projectTitle[this.resume.langauge][4]}</h3>
               <img alt={'pregnant'} style={styles.image} src={pregnant}/>
             </div>
             <div style={styles.block} onClick={() => this.showProject('house')}>
-              <h3 style={styles.contentTitle}>{'數位宅粧擴增實境App'}</h3>
+              <h3 style={styles.contentTitle}>{projectTitle[this.resume.langauge][5]}</h3>
               <img alt={'house'} style={styles.image} src={house}/>
             </div>
             <div style={styles.block} onClick={() => this.showProject('rocket')}>
-              <h3 style={styles.contentTitle}>{'火箭前瞻計畫'}</h3>
+              <h3 style={styles.contentTitle}>{projectTitle[this.resume.langauge][6]}</h3>
               <img alt={'rocket'} style={styles.image} src={rocket}/>
             </div>
           </div>
@@ -229,7 +230,8 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     width: 200,
-    alignItems: 'center'
+    alignItems: 'center',
+    textAlign: 'center'
   },
   h3: {
     display: 'inline',
@@ -237,10 +239,6 @@ const styles = {
   },
   title: {
     color: '#a0522d'
-  },
-  subTitle: {
-    display: 'inline',
-    color: '#f4a460'
   },
   tech: {
     color: '#008000'

@@ -1,10 +1,12 @@
 import React, { PureComponent } from 'react'
+import { inject, observer } from 'mobx-react'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import AppBar from 'material-ui/AppBar'
 import Select from 'react-select'
 // local components
 import '../App.css'
+import menu from '../configs/menu.json'
 
 class Navigator extends PureComponent {
   constructor(props) {
@@ -59,17 +61,17 @@ class Navigator extends PureComponent {
           />
             <MenuItem onClick={this.goToProfile}>
               <p style={styles.link}>
-                {'經歷'}
+                {menu[this.resume.langauge][0]}
               </p>
             </MenuItem>
             <MenuItem onClick={this.goToProject}>
               <p style={styles.link}>
-                {'作品集'}
+                {menu[this.resume.langauge][1]}
               </p>
             </MenuItem>
             <MenuItem onClick={this.goToService}>
               <p style={styles.link}>
-                {'服務'}
+                {menu[this.resume.langauge][2]}
               </p>
             </MenuItem>
         </Drawer>
@@ -85,7 +87,7 @@ class Navigator extends PureComponent {
   }
 }
 
-export default Navigator
+export default inject('resume')(observer(Navigator))
 
 const options = [
   { value: 'ch', label: '中文' },
