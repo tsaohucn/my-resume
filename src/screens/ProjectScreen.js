@@ -143,32 +143,32 @@ class ProjectScreen extends Component {
         </Modal>
         <Layout {...this.props}>
           <div style={styles.content}>
-            <div style={styles.block} onClick={() => this.showProject('holdem')}>
-              <h2>{'德州撲克App'}</h2>
+            <div style={styles.blockTop} onClick={() => this.showProject('holdem')}>
+              <h3 style={styles.contentTitle}>{'德州撲克App'}</h3>
               <img alt={'holdem'} style={styles.image} src={holdem}/>
             </div>
-            <div style={styles.block} onClick={() => this.showProject('comicbook')}>
-              <h2>{'看漫畫App'}</h2>
+            <div style={styles.blockTop} onClick={() => this.showProject('comicbook')}>
+              <h3 style={styles.contentTitle}>{'看漫畫App'}</h3>
               <img alt={'comicbook'} style={styles.image} src={comicbook}/>
             </div>
-            <div style={styles.block} onClick={() => this.showProject('bacon')}>
-              <h2>{'Bacon交友App'}</h2>
+            <div style={styles.blockTop} onClick={() => this.showProject('bacon')}>
+              <h3 style={styles.contentTitle}>{'Bacon交友App'}</h3>
               <img alt={'bacon'} style={styles.image} src={bacon}/>
             </div>
             <div style={styles.block} onClick={() => this.showProject('tomato')}>
-              <h2>{'TOMATO匠App'}</h2>
+              <h3 style={styles.contentTitle}>{'TOMATO匠App'}</h3>
               <img alt={'tomato'} style={styles.image} src={tomato}/>
             </div>
             <div style={styles.block} onClick={() => this.showProject('pregnant')}>
-              <h2>{'好孕邦App'}</h2>
+              <h3 style={styles.contentTitle}>{'好孕邦App'}</h3>
               <img alt={'pregnant'} style={styles.image} src={pregnant}/>
             </div>
             <div style={styles.block} onClick={() => this.showProject('house')}>
-              <h2>{'數位宅粧擴增實境App'}</h2>
+              <h3 style={styles.contentTitle}>{'數位宅粧擴增實境App'}</h3>
               <img alt={'house'} style={styles.image} src={house}/>
             </div>
             <div style={styles.block} onClick={() => this.showProject('rocket')}>
-              <h2>{'火箭前瞻計畫'}</h2>
+              <h3 style={styles.contentTitle}>{'火箭前瞻計畫'}</h3>
               <img alt={'rocket'} style={styles.image} src={rocket}/>
             </div>
           </div>
@@ -189,13 +189,28 @@ const styles = {
     justifyContent: 'space-between' 
   },
   block: {
+    display: 'flex',
+    flexDirection: 'column',
     width: '30%',
-    aspectRatio: 2
+    aspectRatio: 2,
+    alignItems: 'flex-start',
+    marginTop: 50
+  },
+  blockTop: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '30%',
+    aspectRatio: 2,
+    alignItems: 'flex-start',
+    marginTop: 0
   },
   image: {
     objectFit: 'contain',
-    width: '100%',
-    maxHeight: 250
+    width: 200,
+    height: 200,
+    borderRadius: 5000,
+    borderWidth: 200,
+    backgroundColor: '#000000'
   },
   image1: {
     objectFit: 'contain',
@@ -209,6 +224,12 @@ const styles = {
   link: {
     textDecoration: 'none',
     display: 'block'
+  },
+  contentTitle: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: 200,
+    alignItems: 'center'
   },
   h3: {
     display: 'inline',
